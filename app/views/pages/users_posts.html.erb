@@ -1,0 +1,6 @@
+<% @userAllPosts.each do |t| %>
+    <h2><%= t.title %></h2>
+    <p>Image: <%= image_tag t.image %><br>
+    <%= link_to 'Show Post', t %>
+    <hr>
+    <% end %>

@@ -1,0 +1,6 @@
+<% @users.each do |t| %>
+    <h2><%= t.name %></h2>
+    <p><%= image_tag current_user.photo_url, :class => "img-circle" %>
+    <%= link_to 'Posts', user_post_path(t.id) %><span class="mini-counter"><%= Post.where(uid: t.uid).count %></span>
+    <hr>
+    <% end %>

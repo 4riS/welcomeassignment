@@ -1,0 +1,13 @@
+<h1>Create an article</h1>
+
+<%= form_for @post, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
+    <label>Title :</label>
+    <%= f.text_field :title %>
+    <label>Message :</label>
+    <%= f.text_area :body %>
+    <label>Hashtags :</label>
+    <%= f.text_area :hashtags %>
+    <label>Image :</label>
+    <%= f.file_field :image %>
+    <%= f.submit "Create" %>
+  <% end %>

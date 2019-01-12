@@ -1,0 +1,6 @@
+<% @hashtags.each do |h| %>
+    <h2>#<%= h.name %></h2>
+    <%= link_to 'Posts', hashtag_post_path(h.name) %>
+    <span class="mini-counter"><%= @hashtags_count[h.name] %></span>
+    <hr>
+    <% end %>

@@ -1,0 +1,6 @@
+<% @hashtag_posts.each do |h| %>
+    <h2><%= h.title %></h2>
+    <p><%= image_tag h.image %><br>
+    <%= link_to 'Show Post', h %>
+    <hr>
+<% end %>
